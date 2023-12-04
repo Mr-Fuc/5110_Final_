@@ -91,16 +91,19 @@ public class shuxingkongzhi : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if (man .tha .year>=40&&!(man .tha .isdie))
         {
 
         }
-
+        */
 
 
         one.text = "" + intelligence;
         one2.text = "" + mental;
         one3.text = "" + health;
         one4.text = "" + wealth;
+        Debug.Log(intelligence);
+        Debug.Log(mental);
     }
 }
