@@ -18,6 +18,7 @@ public class TypewriterEffect : MonoBehaviour
     public TextMeshProUGUI  text; // 文本组件
     public string content; // 要显示的内容
     public float duration = 2f; // 显示的总时长
+    public float wait_after_type;
     private float timer; // 计时器
     private int index; // 当前显示的字符索引
 
@@ -34,7 +35,7 @@ public class TypewriterEffect : MonoBehaviour
            
            
             timer += Time.deltaTime; // 更新计时器
-            if (timer >= duration) // 如果超过总时长
+            if (timer >= duration + wait_after_type) // 如果超过总时长
             {
                 text.text = content; // 直接显示全部内容
                 whetherClick = true;
