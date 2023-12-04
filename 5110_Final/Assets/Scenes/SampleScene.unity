@@ -2158,6 +2158,7 @@ MonoBehaviour:
   text: {fileID: 1736989395}
   content: 
   duration: 2
+  wait_after_type: 0.5
 --- !u!1 &554969212
 GameObject:
   m_ObjectHideFlags: 0
