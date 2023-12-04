@@ -165,11 +165,19 @@ public class man : MonoBehaviour
                 }
 
 
-                year += 1;
-                yiwaishijian.tha.shijian.text = "";
-                yiwaishijian.tha.shijianmzong();
-                yiwaishijian.tha.caiaa();
-                yiwaishijian.tha.shengbinga();
+            year += 1;
+            //事件判定及运行
+            yiwaishijian.tha.shijian.text = "";
+            yiwaishijian.tha.shijianmzong();
+            yiwaishijian.tha.lottery();
+            yiwaishijian.tha.illness();
+            //新增事件（拥有可整合的可能性）
+            yiwaishijian.tha.buyCar();
+            yiwaishijian.tha.buyHouse();
+            yiwaishijian.tha.richPerson();
+            yiwaishijian.tha.workPromotion();
+            yiwaishijian.tha.workDemotion();
+
                 if (year < 60)
                 {
                     if (year == 18)
@@ -356,10 +364,10 @@ public class man : MonoBehaviour
           
                     if (genggai)
                     {
-                        yiwaishijian.tha.lihun();
+                        yiwaishijian.tha.isDivorced();
                         genggai = !genggai;
                     }
-                    yiwaishijian.tha.lihun();
+                    yiwaishijian.tha.isDivorced();
                 }
             }
             if (year >= 40 && year <= 60)
@@ -396,7 +404,7 @@ public class man : MonoBehaviour
                     marry.SetActive(false);
                     if (genggai)
                     {
-                        yiwaishijian.tha.lihun();
+                        yiwaishijian.tha.isDivorced();
                         genggai = !genggai;
                         
                     }

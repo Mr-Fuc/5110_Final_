@@ -14,8 +14,12 @@ public class yiwaishijian : MonoBehaviour
     public bool bigdisorder = false;
     public bool zhongfengf;
     public bool heartDisease;
+    //初始化数值
+    public bool haveCar = false;
+    public bool haveHouse = false;
+    public bool isRichman = false;
 
-    public bool shenmgbing;
+    public bool haveIllness;
 
     public string[] travelPlans;
     private void Awake()
@@ -27,7 +31,7 @@ public class yiwaishijian : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        travel = disorder = bigdisorder = zhongfengf = shenmgbing = false;
+        travel = disorder = bigdisorder = zhongfengf = haveIllness = false;
     }
 
     void disorderLogic()
@@ -77,7 +81,7 @@ public class yiwaishijian : MonoBehaviour
         }
     }
 
-    public void duboaa()
+    public void gambling()
     {
         if (man.tha.year > 18)
         {
@@ -100,7 +104,7 @@ public class yiwaishijian : MonoBehaviour
         }
     }
 
-    public void caiaa()
+    public void lottery()
     {
         if (man.tha.year > 18)
         {
@@ -122,9 +126,9 @@ public class yiwaishijian : MonoBehaviour
         }
     }
 
-    public void shengbinga()
+    public void illness()
     {
-        if (shuxingkongzhi .tha .health < 30&&!shenmgbing)
+        if (shuxingkongzhi .tha .health < 30&&!haveIllness)
         {
             int a= Random.Range(0, 100);
             a += shuxingkongzhi.tha.health;
@@ -136,11 +140,11 @@ public class yiwaishijian : MonoBehaviour
                 shuxingkongzhi.tha.health -= 5;
                 shuxingkongzhi.tha.mental -= 3;
                 shuxingkongzhi.tha.wealth -= 2;
-                shenmgbing = true;
+                haveIllness = true;
             }
            
         }
-        if (shenmgbing)
+        if (haveIllness)
         {
             int a = Random.Range(0, 100);
             a += shuxingkongzhi.tha.health ;
@@ -150,7 +154,7 @@ public class yiwaishijian : MonoBehaviour
                 TypewriterEffect.tha.typeWords();
                 shuxingkongzhi.tha.health  += 4 ;
                 shuxingkongzhi.tha.mental += 3;
-                shenmgbing = false ;
+                haveIllness = false ;
             }
         }
     }
@@ -242,14 +246,112 @@ public class yiwaishijian : MonoBehaviour
             TypewriterEffect.tha.typeWords();
         }
     }
-    public void lihun()
+    public void isDivorced()
     {
         TypewriterEffect.tha.content = "He's divorced.";
         TypewriterEffect.tha.typeWords();
+        //属性改变
+        shuxingkongzhi.tha.wealth /= 2;
+        shuxingkongzhi.tha.mental -= 5;
     }
     public void jiehun()
     {
         TypewriterEffect.tha.content = "he is married";
         TypewriterEffect.tha.typeWords();
+        //属性改变
+        shuxingkongzhi.tha.wealth += 25;
+        shuxingkongzhi.tha.mental += 5;
+        shuxingkongzhi.tha.health += 2;
+    }
+
+    public void buyCar()
+    {
+        //年龄及财富、条件判断
+        if (man.tha.year >= 18 && shuxingkongzhi.tha.wealth >= 50 && haveCar == false )
+        {
+            //打字
+            TypewriterEffect.tha.content = "he bought a car";
+            TypewriterEffect.tha.typeWords();
+            //属性改变
+            shuxingkongzhi.tha.wealth -= 30;
+            shuxingkongzhi.tha.mental += 5;
+            shuxingkongzhi.tha.intelligence += 2;
+            man.tha.dongtmarry -= 5;
+            //判断条件改变
+            haveCar = true;
+        }
+           
+    }
+
+    public void buyHouse()
+    {
+        //年龄及财富、条件判断
+        if (man.tha.year >= 18 && shuxingkongzhi.tha.wealth >= 200 && haveHouse == false )
+        {
+            //打字
+            TypewriterEffect.tha.content = "he bought a house";
+            TypewriterEffect.tha.typeWords();
+            //属性改变
+            shuxingkongzhi.tha.wealth -= 100;
+            shuxingkongzhi.tha.mental += 5;
+            shuxingkongzhi.tha.health += 3;
+            man.tha.dongtmarry -= 10;
+            //判断条件改变
+            haveHouse = true;
+        }
+    }
+
+    public void richPerson()
+    {   
+        //先决条件判断
+        if(isRichman == true && shuxingkongzhi.tha.wealth <= 150 )
+        {
+            TypewriterEffect.tha.content = "he is no longer a billionairy";
+            TypewriterEffect.tha.typeWords();
+            isRichman = false;
+        }
+        //年龄及财富、条件判断
+        if (man.tha.year >= 20 && shuxingkongzhi.tha.wealth >= 250 && isRichman == false )
+        {
+            //打字
+            TypewriterEffect.tha.content = "he became a billionairy";
+            TypewriterEffect.tha.typeWords();
+            //属性改变
+            shuxingkongzhi.tha.mental -= 10;
+            shuxingkongzhi.tha.intelligence += 5;
+            shuxingkongzhi.tha.health += 10;
+            man.tha.dongtmarry += 10;
+            isRichman = true;
+        }
+    }
+
+    public void workPromotion()
+    {
+        //年龄及智力判断
+        if (man.tha.year >= 25 && man.tha.year <= 50 && shuxingkongzhi.tha.intelligence > 40)
+        {
+            TypewriterEffect.tha.content = "he got a work promotion";
+            TypewriterEffect.tha.typeWords();
+            //属性改变
+            shuxingkongzhi.tha.intelligence += 5;
+            shuxingkongzhi.tha.wealth += 20;
+            shuxingkongzhi.tha.health -= 5;
+            man.tha.dongtmarry -= 10;
+        }
+    }
+
+    public void workDemotion()
+    {
+        //年龄及智力判断
+        if (man.tha.year >= 25 && man.tha.year <= 50 && shuxingkongzhi.tha.intelligence < 20)
+        {
+            TypewriterEffect.tha.content = "he got a work demotion";
+            TypewriterEffect.tha.typeWords();
+            //属性改变
+            shuxingkongzhi.tha.mental -= 5;
+            shuxingkongzhi.tha.wealth -= 20;
+            shuxingkongzhi.tha.health += 5;
+            man.tha.dongtmarry += 5;
+        }
     }
 }
