@@ -342,7 +342,7 @@ public class man : MonoBehaviour
                         dongtmarry -= 10;
                         yiwaishijian.tha.shijian.text = "He got a present for his anniversary";
                         TypewriterEffect.tha.dazi();
-                        shuxingkongzhi.tha.xinli += 3;
+                        shuxingkongzhi.tha.Mental += 3;
                     }
                 }
                 if (m <= dongtmarry)
@@ -381,7 +381,7 @@ public class man : MonoBehaviour
                     {
                         fuqihemu = true;
                         dongtmarry -= 10;
-                        shuxingkongzhi.tha.xinli += 3;
+                        shuxingkongzhi.tha.Mental += 3;
                         yiwaishijian.tha.shijian.text = "He got a present for his anniversary";
                         TypewriterEffect.tha.dazi();
                     }

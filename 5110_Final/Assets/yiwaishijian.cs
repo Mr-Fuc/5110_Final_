@@ -34,7 +34,7 @@ public class yiwaishijian : MonoBehaviour
     {
         if (!yiyu)
         {
-            if (shuxingkongzhi .tha.xinli <= 10)
+            if (shuxingkongzhi .tha.Mental <= 10)
             {
                 TypewriterEffect.tha.content = "He suffered from depression";
                 TypewriterEffect.tha.dazi();
@@ -44,13 +44,13 @@ public class yiwaishijian : MonoBehaviour
         }
         if(yiyu&&!bigyiyu)
         {
-            if (shuxingkongzhi.tha.xinli <= 5)
+            if (shuxingkongzhi.tha.Mental <= 5)
             {
                 TypewriterEffect.tha.content = "His depression worsened";
                 TypewriterEffect.tha.dazi();
                 bigyiyu = true;
             }
-            if (shuxingkongzhi.tha.xinli >= 40)
+            if (shuxingkongzhi.tha.Mental >= 40)
             {
                 TypewriterEffect.tha.content = "He came out of depression";
                 TypewriterEffect.tha.dazi();
@@ -60,14 +60,14 @@ public class yiwaishijian : MonoBehaviour
         }
         if (bigyiyu)
         {
-            if (shuxingkongzhi.tha.xinli >= 40)
+            if (shuxingkongzhi.tha.Mental >= 40)
             {
                 TypewriterEffect.tha.content = "He came out of depression";
                 TypewriterEffect.tha.dazi();
                 bigyiyu = false;
                 yiyu = false;
             }
-            if (shuxingkongzhi.tha.xinli <= 1)
+            if (shuxingkongzhi.tha.Mental <= 1)
             {
                man .tha . siyin.text = "Accidental poisoning";
                
@@ -81,16 +81,16 @@ public class yiwaishijian : MonoBehaviour
     {
         if (man.tha.year > 18)
         {
-            if (shuxingkongzhi.tha.touzi >= 5 && shuxingkongzhi.tha.caifu >= 50)
+            if (shuxingkongzhi.tha.Investment >= 5 && shuxingkongzhi.tha.Wealth >= 50)
             {
-                shuxingkongzhi.tha.xinli -= 2;
+                shuxingkongzhi.tha.Mental -= 2;
                 int a = Random.Range(0, 1);
                 if (a == 0)
                 {
-                    shuxingkongzhi.tha.caifu += 5;
+                    shuxingkongzhi.tha.Wealth += 5;
                 }else
                 {
-                    shuxingkongzhi.tha.caifu -= 5;
+                    shuxingkongzhi.tha.Wealth -= 5;
                 }
 
                 TypewriterEffect.tha.content = "He is involved in gambling";
@@ -109,33 +109,33 @@ public class yiwaishijian : MonoBehaviour
             {
                 TypewriterEffect.tha.content = "He won a big prize in the lottery";
                 TypewriterEffect.tha.dazi();
-                shuxingkongzhi.tha.xinli += 10;
-                shuxingkongzhi.tha.caifu += 100;
+                shuxingkongzhi.tha.Mental += 10;
+                shuxingkongzhi.tha.Wealth += 100;
             }
             if (a > 1 && a <= 3)
             {
                 TypewriterEffect.tha.content = "He won a small prize in the lottery";
                 TypewriterEffect.tha.dazi();
-                shuxingkongzhi.tha.xinli += 1;
-                shuxingkongzhi.tha.caifu += 10;
+                shuxingkongzhi.tha.Mental += 1;
+                shuxingkongzhi.tha.Wealth += 10;
             }
         }
     }
 
     public void shengbinga()
     {
-        if (shuxingkongzhi .tha .jiankang < 30&&!shenmgbing)
+        if (shuxingkongzhi .tha .Health < 30&&!shenmgbing)
         {
             int a= Random.Range(0, 100);
-            a += shuxingkongzhi.tha.jiankang;
+            a += shuxingkongzhi.tha.Health;
             if (a > 50)
             {
                 TypewriterEffect.tha.content = "He was ill.";
                 TypewriterEffect.tha.dazi();
-                shuxingkongzhi.tha.zhili -= 1;
-                shuxingkongzhi.tha.jiankang -= 5;
-                shuxingkongzhi.tha.xinli -= 3;
-                shuxingkongzhi.tha.caifu -= 2;
+                shuxingkongzhi.tha.Intelligence -= 1;
+                shuxingkongzhi.tha.Health -= 5;
+                shuxingkongzhi.tha.Mental -= 3;
+                shuxingkongzhi.tha.Wealth -= 2;
                 shenmgbing = true;
             }
            
@@ -143,13 +143,13 @@ public class yiwaishijian : MonoBehaviour
         if (shenmgbing)
         {
             int a = Random.Range(0, 100);
-            a += shuxingkongzhi.tha.jiankang;
+            a += shuxingkongzhi.tha.Health ;
             if (a > 80)
             {
                 TypewriterEffect.tha.content = "He recovered.";
                 TypewriterEffect.tha.dazi();
-                shuxingkongzhi.tha.jiankang += 4 ;
-                shuxingkongzhi.tha.xinli += 3;
+                shuxingkongzhi.tha.Health  += 4 ;
+                shuxingkongzhi.tha.Mental += 3;
                 shenmgbing = false ;
             }
         }
@@ -166,7 +166,7 @@ public class yiwaishijian : MonoBehaviour
         TypewriterEffect.tha.dazi();
         if (man.tha.year > 30 && !zhongfengf)
         {
-            if (shuxingkongzhi.tha.jiankang <= 30)
+            if (shuxingkongzhi.tha.Health <= 30)
             {
                 TypewriterEffect.tha.content = "He suffered a stroke.";
                 TypewriterEffect.tha.dazi();
@@ -175,7 +175,7 @@ public class yiwaishijian : MonoBehaviour
         }
         if (man.tha.year > 60 && !xinzangbing)
         {
-            if (shuxingkongzhi.tha.jiankang <= 50)
+            if (shuxingkongzhi.tha.Health <= 50)
             {
                 TypewriterEffect.tha.content = "He had a heart attack.";
                 TypewriterEffect.tha.dazi();
@@ -187,13 +187,13 @@ public class yiwaishijian : MonoBehaviour
 
 
 
-        if (shuxingkongzhi.tha.caifu <= 0)
+        if (shuxingkongzhi.tha.Wealth <= 0)
         {
             man.tha.siyin.text = "starvation";
            
             man.tha.siwang.SetActive(true);
         }
-        if (shuxingkongzhi.tha.jiankang <= 0)
+        if (shuxingkongzhi.tha.Health  <= 0)
         {
             man.tha.siyin.text = "illness";
            
@@ -202,7 +202,7 @@ public class yiwaishijian : MonoBehaviour
         yiyuluoji();
         if (!luyou)
         {
-            if (shuxingkongzhi.tha.caifu >= 100)
+            if (shuxingkongzhi.tha.Wealth  >= 100)
             {
                 int aes =Random.Range(0, lvyouxiangmu.Length);
                 string bea = lvyouxiangmu[aes];
@@ -226,17 +226,17 @@ public class yiwaishijian : MonoBehaviour
     }
     public void daxueaa()
     {
-        if (shuxingkongzhi.tha.zhili >= 40)
+        if (shuxingkongzhi.tha.Intelligence >= 40)
         {
             TypewriterEffect.tha.content = "He got into a good university";
             TypewriterEffect.tha.dazi();
         }
-        if (shuxingkongzhi.tha.zhili<40&& shuxingkongzhi.tha.zhili >= 20)
+        if (shuxingkongzhi.tha.Intelligence < 40 && shuxingkongzhi.tha.Intelligence  >= 20)
         {
             TypewriterEffect.tha.content = "He got into a general university";
             TypewriterEffect.tha.dazi();
         }
-        if (shuxingkongzhi.tha.zhili < 20)
+        if (shuxingkongzhi.tha.Mental < 20)
         {
             TypewriterEffect.tha.content = "He didn't go to university";
             TypewriterEffect.tha.dazi();

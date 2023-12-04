@@ -11,12 +11,12 @@ public class shuxingkongzhi : MonoBehaviour
         tha = this;
     }
 
-    public int zhili;
-    public int xinli;
-    public int jiankang;
-    public int caifu;
-    public int jiating;
-    public int touzi;
+    public int Intelligence;
+    public int Mental;
+    public int Health;
+    public int Wealth;
+    public int Family;
+    public int Investment;
 
     public TextMeshProUGUI one;
     public TextMeshProUGUI one2;
@@ -26,18 +26,18 @@ public class shuxingkongzhi : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        touzi = 0;
-        zhili = Random.Range(0,10);
-        xinli = Random.Range(30, 100);
-        jiankang = Random.Range(50, 100);
-        caifu = Random.Range(10, 100);
+        Investment = 0;
+        Intelligence = Random.Range(0,10);
+        Mental = Random.Range(30, 100);
+        Health = Random.Range(50, 100);
+        Wealth = Random.Range(10, 100);
     }
     public void touziaa()
     {
         if (TypewriterEffect.tha.shifoudianji == true)
         {
             man.tha.oncliceaa();
-            touzi += 1;
+            Investment += 1;
         }
     }
     public void growzhili(int ase)
@@ -45,7 +45,7 @@ public class shuxingkongzhi : MonoBehaviour
         if (TypewriterEffect.tha.shifoudianji == true)
         {
             man.tha.oncliceaa();
-            zhili += ase;
+            Intelligence += ase;
         }
     }
     public void growxinli(int ase)
@@ -53,7 +53,7 @@ public class shuxingkongzhi : MonoBehaviour
         if (TypewriterEffect.tha.shifoudianji == true)
         {
             man.tha.oncliceaa();
-            xinli += ase;
+            Mental += ase;
         }
     }
     public void growjiankang(int ase)
@@ -61,7 +61,7 @@ public class shuxingkongzhi : MonoBehaviour
         if (TypewriterEffect.tha.shifoudianji == true)
         {
             man.tha.oncliceaa();
-            jiankang += ase;
+            Health += ase;
         }
     }
     public void growcaifu(int ase)
@@ -69,7 +69,7 @@ public class shuxingkongzhi : MonoBehaviour
         if (TypewriterEffect.tha.shifoudianji == true)
         {
             man.tha.oncliceaa();
-            caifu += ase;
+            Wealth += ase;
         }
     }
     public void growjiating(int ase)
@@ -98,9 +98,9 @@ public class shuxingkongzhi : MonoBehaviour
 
 
 
-        one.text = "" + zhili;
-        one2.text = "" + xinli;
-        one3.text = "" + jiankang ;
-        one4.text = "" + caifu;
+        one.text = "" + Intelligence;
+        one2.text = "" + Mental;
+        one3.text = "" + Health;
+        one4.text = "" + Wealth;
     }
 }
