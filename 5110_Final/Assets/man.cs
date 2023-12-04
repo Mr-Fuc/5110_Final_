@@ -8,12 +8,12 @@ public class man : MonoBehaviour
 {
     public GameObject[] allbtt;
 
-    public GameObject[] anniu1;
-    public GameObject[] anniu2;
-    public GameObject[] anniu3;
-    public GameObject[] anniu4;
-    public GameObject[] anniu5;
-    public GameObject[] anniu6;
+    public GameObject[] buttomOne;
+    public GameObject[] buttomTwo;
+    public GameObject[] buttomThree;
+    public GameObject[] buttomFour;
+    public GameObject[] buttomFive;
+    public GameObject[] buttomSix;
 
     public TextMeshProUGUI jia1;
     public TextMeshProUGUI jia2;
@@ -38,44 +38,44 @@ public class man : MonoBehaviour
             ase.SetActive(false);
         }
     }
-    public void anniu1om()
+    public void buttomOneom()
     {
-        foreach (GameObject ase in anniu1 )
+        foreach (GameObject ase in buttomOne )
         {
             ase.SetActive(true);
         }
     }
-    public void anniu2om()
+    public void buttomTwoom()
     {
-        foreach (GameObject ase in anniu2)
+        foreach (GameObject ase in buttomTwo)
         {
             ase.SetActive(true);
         }
     }
-    public void anniu3om()
+    public void buttomThreeom()
     {
-        foreach (GameObject ase in anniu3)
+        foreach (GameObject ase in buttomThree)
         {
             ase.SetActive(true);
         }
     }
-    public void anniu4om()
+    public void buttomFourom()
     {
-        foreach (GameObject ase in anniu4)
+        foreach (GameObject ase in buttomFour)
         {
             ase.SetActive(true);
         }
     }
-    public void anniu5om()
+    public void buttomFiveom()
     {
-        foreach (GameObject ase in anniu5)
+        foreach (GameObject ase in buttomFive)
         {
             ase.SetActive(true);
         }
     }
-    public void anniu6om()
+    public void buttomSixom()
     {
-        foreach (GameObject ase in anniu6)
+        foreach (GameObject ase in buttomSix)
         {
             ase.SetActive(true);
         }
@@ -122,7 +122,7 @@ public class man : MonoBehaviour
         genggai=fuqihemu =fuqizhengchao = false;
 
         allcolse();
-        anniu1om();
+        buttomOneom();
         marrycount = 10;
         dongtmarry = 5;
         marry.SetActive(false);
@@ -158,7 +158,7 @@ public class man : MonoBehaviour
                     {
                         StartCoroutine(growa2());
                         yiwaishijian.tha.shijian.text = "His child has grown up.";
-                        TypewriterEffect.tha.dazi();
+                        TypewriterEffect.tha.typeWords();
                         Debug.Log(37);
                     }
                  
@@ -207,7 +207,7 @@ public class man : MonoBehaviour
             hisbabytru = false;
             yiwaishijian.tha.shijian.text = "His children have become independent.";
             hisbaby.SetTrigger("end");
-            TypewriterEffect.tha.dazi();
+            TypewriterEffect.tha.typeWords();
         }
 
 
@@ -219,7 +219,7 @@ public class man : MonoBehaviour
             isbaby = false;
             isboy = true;
             allcolse();
-            anniu2om();
+            buttomTwoom();
 
         }
         if (year > 12 && isboy)
@@ -228,7 +228,7 @@ public class man : MonoBehaviour
             isboy = false;
             isyounman = true;
             allcolse();
-            anniu3om();
+            buttomThreeom();
         }
         if (year > 18 && isyounman)
         {
@@ -236,12 +236,12 @@ public class man : MonoBehaviour
             isyounman = false;
             isman = true;
             allcolse();
-            anniu4om();
+            buttomFourom();
         }
         if (year >35&&year <= 60)
         {
             allcolse();
-            anniu5om();
+            buttomFiveom();
         }
         if (year > 60 && isman)
         {
@@ -250,7 +250,7 @@ public class man : MonoBehaviour
             marry.SetActive(false);
             StartCoroutine(growa());
             allcolse();
-            anniu6om();
+            buttomSixom();
         }
        
 
@@ -303,8 +303,8 @@ public class man : MonoBehaviour
         }
        else  if (ismarryed)
         {
-            jia1.text = "Family";
-            jia2.text = "Family";
+            jia1.text = "family";
+            jia2.text = "family";
             
             dongbabyyear += 1;
             if (dongbabyyear > 2&&year < 45&&hisbabytru ==false)
@@ -316,7 +316,7 @@ public class man : MonoBehaviour
                     hisbabytru = true;
                     hisbabyboidy.SetActive(true);
                     yiwaishijian.tha.shijian.text = "His child was born.";
-                    TypewriterEffect.tha.dazi();
+                    TypewriterEffect.tha.typeWords();
                 }
 
             }
@@ -331,7 +331,7 @@ public class man : MonoBehaviour
                         fuqizhengchao = true;
                         dongtmarry += 10;
                         yiwaishijian.tha.shijian.text = "He had a quarrel with his wife over some family matters";
-                        TypewriterEffect.tha.dazi();
+                        TypewriterEffect.tha.typeWords();
                     }
                 }
                 if (dongtmarry <= 20)
@@ -341,8 +341,8 @@ public class man : MonoBehaviour
                         fuqihemu = true;
                         dongtmarry -= 10;
                         yiwaishijian.tha.shijian.text = "He got a present for his anniversary";
-                        TypewriterEffect.tha.dazi();
-                        shuxingkongzhi.tha.Mental += 3;
+                        TypewriterEffect.tha.typeWords();
+                        shuxingkongzhi.tha.mental += 3;
                     }
                 }
                 if (m <= dongtmarry)
@@ -372,7 +372,7 @@ public class man : MonoBehaviour
                         fuqizhengchao = true;
                         dongtmarry += 10;
                         yiwaishijian.tha.shijian.text = "He had a quarrel with his wife over some family matters";
-                        TypewriterEffect.tha.dazi();
+                        TypewriterEffect.tha.typeWords();
                     }
                 }
                 if (dongtmarry <= 20)
@@ -381,9 +381,9 @@ public class man : MonoBehaviour
                     {
                         fuqihemu = true;
                         dongtmarry -= 10;
-                        shuxingkongzhi.tha.Mental += 3;
+                        shuxingkongzhi.tha.mental += 3;
                         yiwaishijian.tha.shijian.text = "He got a present for his anniversary";
-                        TypewriterEffect.tha.dazi();
+                        TypewriterEffect.tha.typeWords();
                     }
                 }
                 if (m <= dongtmarry)
@@ -621,7 +621,7 @@ public class man : MonoBehaviour
     void OLDDIE()
     {
         allcolse();
-        anniu6om();
+        buttomSixom();
         if (isdie == false)
         {
             if (OLDMANDIECOUNT < 99)

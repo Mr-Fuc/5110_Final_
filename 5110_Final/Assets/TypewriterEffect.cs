@@ -13,7 +13,7 @@ public class TypewriterEffect : MonoBehaviour
         tha = this;
     }
 
-    public bool shifoudianji;
+    public bool whetherClick;
 
     public TextMeshProUGUI  text; // 文本组件
     public string content; // 要显示的内容
@@ -23,13 +23,13 @@ public class TypewriterEffect : MonoBehaviour
 
     void Start()
     {
-        shifoudianji = true;
+        whetherClick = true;
         text.text = ""; // 清空文本
     }
 
     void Update()
     {
-        if (shifoudianji ==false)
+        if (whetherClick ==false)
         {
            
            
@@ -37,7 +37,7 @@ public class TypewriterEffect : MonoBehaviour
             if (timer >= duration) // 如果超过总时长
             {
                 text.text = content; // 直接显示全部内容
-                shifoudianji = true;
+                whetherClick = true;
                 timer = 0;
             }
             else
@@ -48,8 +48,8 @@ public class TypewriterEffect : MonoBehaviour
         }
       
     }
-    public void dazi()
+    public void typeWords()
     {
-        shifoudianji = false;
+        whetherClick = false;
     }
 }

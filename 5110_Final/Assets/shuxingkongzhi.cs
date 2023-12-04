@@ -11,12 +11,12 @@ public class shuxingkongzhi : MonoBehaviour
         tha = this;
     }
 
-    public int Intelligence;
-    public int Mental;
-    public int Health;
-    public int Wealth;
-    public int Family;
-    public int Investment;
+    public int intelligence;
+    public int mental;
+    public int health;
+    public int wealth;
+    public int family;
+    public int investment;
 
     public TextMeshProUGUI one;
     public TextMeshProUGUI one2;
@@ -26,55 +26,55 @@ public class shuxingkongzhi : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Investment = 0;
-        Intelligence = Random.Range(0,10);
-        Mental = Random.Range(30, 100);
-        Health = Random.Range(50, 100);
-        Wealth = Random.Range(10, 100);
+        investment = 0;
+        intelligence = Random.Range(0,10);
+        mental = Random.Range(30, 100);
+        health = Random.Range(50, 100);
+        wealth = Random.Range(10, 100);
     }
     public void touziaa()
     {
-        if (TypewriterEffect.tha.shifoudianji == true)
+        if (TypewriterEffect.tha.whetherClick == true)
         {
             man.tha.oncliceaa();
-            Investment += 1;
+            investment += 1;
         }
     }
-    public void growzhili(int ase)
+    public void intelligenceGrowth(int ase)
     {
-        if (TypewriterEffect.tha.shifoudianji == true)
+        if (TypewriterEffect.tha.whetherClick == true)
         {
             man.tha.oncliceaa();
-            Intelligence += ase;
+            intelligence += ase;
         }
     }
-    public void growxinli(int ase)
+    public void mentalGrowth(int ase)
     {
-        if (TypewriterEffect.tha.shifoudianji == true)
+        if (TypewriterEffect.tha.whetherClick == true)
         {
             man.tha.oncliceaa();
-            Mental += ase;
+            mental += ase;
         }
     }
-    public void growjiankang(int ase)
+    public void healthGrowth(int ase)
     {
-        if (TypewriterEffect.tha.shifoudianji == true)
+        if (TypewriterEffect.tha.whetherClick == true)
         {
             man.tha.oncliceaa();
-            Health += ase;
+            health += ase;
         }
     }
-    public void growcaifu(int ase)
+    public void wealthGrowth(int ase)
     {
-        if (TypewriterEffect.tha.shifoudianji == true)
+        if (TypewriterEffect.tha.whetherClick == true)
         {
             man.tha.oncliceaa();
-            Wealth += ase;
+            wealth += ase;
         }
     }
-    public void growjiating(int ase)
+    public void familyGrowth(int ase)
     {
-        if (TypewriterEffect.tha.shifoudianji == true)
+        if (TypewriterEffect.tha.whetherClick == true)
         {
             man.tha.oncliceaa();
             if (man.tha.marry == true)
@@ -98,9 +98,9 @@ public class shuxingkongzhi : MonoBehaviour
 
 
 
-        one.text = "" + Intelligence;
-        one2.text = "" + Mental;
-        one3.text = "" + Health;
-        one4.text = "" + Wealth;
+        one.text = "" + intelligence;
+        one2.text = "" + mental;
+        one3.text = "" + health;
+        one4.text = "" + wealth;
     }
 }
