@@ -104,7 +104,7 @@ NavMeshSettings:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_BuildSettings:
-    serializedVersion: 3
+    serializedVersion: 2
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
@@ -117,7 +117,7 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualTileSize: 0
     tileSize: 256
-    buildHeightMesh: 0
+    accuratePlacement: 0
     maxJobWorkers: 0
     preserveTilesOutsideBounds: 0
     debug:
@@ -192,6 +192,7 @@ RectTransform:
   - {fileID: 1156878550}
   - {fileID: 1696001328}
   m_Father: {fileID: 0}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -255,7 +256,6 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -285,12 +285,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db7287ef1585b2d45867a18e59b62bd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Intelligence: 0
-  Mental: 0
-  Health: 0
-  Wealth: 0
-  Family: 0
-  Investment: 0
+  intelligence: 0
+  mental: 0
+  health: 0
+  wealth: 0
+  family: 0
+  investment: 0
   one: {fileID: 86975249}
   one2: {fileID: 2063114514}
   one3: {fileID: 554969214}
@@ -329,6 +329,7 @@ RectTransform:
   m_Children:
   - {fileID: 2110112074}
   m_Father: {fileID: 22664288}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -381,7 +382,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growzhili
+        m_MethodName: intelligenceGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -393,7 +394,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growxinli
+        m_MethodName: mentalGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -405,7 +406,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growjiankang
+        m_MethodName: healthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -417,7 +418,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growcaifu
+        m_MethodName: wealthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -498,6 +499,7 @@ RectTransform:
   m_Children:
   - {fileID: 184788499}
   m_Father: {fileID: 22664288}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -550,7 +552,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growxinli
+        m_MethodName: mentalGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -562,7 +564,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growzhili
+        m_MethodName: intelligenceGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -574,7 +576,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growjiankang
+        m_MethodName: healthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -586,7 +588,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growcaifu
+        m_MethodName: wealthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -665,6 +667,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 477586038}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -799,6 +802,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 801831798}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -828,7 +832,7 @@ MonoBehaviour:
   m_text: study
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6c314887469de1043932b1a8cc394e7f, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 5382133528713325487, guid: 6c314887469de1043932b1a8cc394e7f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -891,7 +895,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &115529240
@@ -978,13 +982,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 145672036}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.0228, y: -0.0228, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &184788496
 GameObject:
@@ -1114,6 +1118,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 59334551}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1149,6 +1154,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 22664288}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1184,6 +1190,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 22664288}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1266,13 +1273,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 293458410}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.0228, y: -10.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &374653999
 GameObject:
@@ -1305,6 +1312,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2057859832}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1439,6 +1447,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1993425060}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1575,6 +1584,7 @@ RectTransform:
   m_Children:
   - {fileID: 2072309130}
   m_Father: {fileID: 22664288}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1627,7 +1637,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growzhili
+        m_MethodName: intelligenceGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1639,7 +1649,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growxinli
+        m_MethodName: mentalGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1651,7 +1661,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growjiankang
+        m_MethodName: healthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1663,7 +1673,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growcaifu
+        m_MethodName: wealthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1742,6 +1752,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1156878550}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1880,6 +1891,7 @@ RectTransform:
   - {fileID: 554969213}
   - {fileID: 570910928}
   m_Father: {fileID: 22664288}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1967,17 +1979,9 @@ Camera:
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
-  m_Iso: 200
-  m_ShutterSpeed: 0.005
-  m_Aperture: 16
-  m_FocusDistance: 10
-  m_FocalLength: 50
-  m_BladeCount: 5
-  m_Curvature: {x: 2, y: 11}
-  m_BarrelClipping: 0.25
-  m_Anamorphism: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -2011,13 +2015,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.14, y: -2.5, z: -10}
   m_LocalScale: {x: 1.1679, y: 1.1679, z: 1.1679}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &519420033
 MonoBehaviour:
@@ -2060,25 +2064,25 @@ MonoBehaviour:
   - {fileID: 1993425059}
   - {fileID: 1793173497}
   - {fileID: 1156878549}
-  anniu1:
+  buttomOne:
   - {fileID: 801831797}
   - {fileID: 2032811698}
-  anniu2:
+  buttomTwo:
   - {fileID: 2057859831}
   - {fileID: 1008501549}
-  anniu3:
+  buttomThree:
   - {fileID: 1960564691}
   - {fileID: 1152718006}
   - {fileID: 1422809717}
   - {fileID: 712556829}
-  anniu4:
+  buttomFour:
   - {fileID: 1737349211}
   - {fileID: 1880698278}
   - {fileID: 384540703}
   - {fileID: 817235638}
   - {fileID: 1912860710}
   - {fileID: 59334550}
-  anniu5:
+  buttomFive:
   - {fileID: 1794078891}
   - {fileID: 1798470547}
   - {fileID: 1805051941}
@@ -2086,7 +2090,7 @@ MonoBehaviour:
   - {fileID: 2044063540}
   - {fileID: 1401690405}
   - {fileID: 50435876}
-  anniu6:
+  buttomSix:
   - {fileID: 564996913}
   - {fileID: 1993425059}
   - {fileID: 1793173497}
@@ -2127,20 +2131,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81e07b237eec5bc42b56acf838d9870d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  luyou: 0
-  yiyu: 0
-  bigyiyu: 0
+  travel: 0
+  disorder: 0
+  bigdisorder: 0
   zhongfengf: 0
-  xinzangbing: 0
-  shenmgbing: 0
-  lvyouxiangmu:
-  - China to see the Great Wall.
-  - France to see the Eiffel Tower.
-  - ' India to see the Taj Mahal.'
-  - ' United States to see the Grand Canyon.'
-  - Japan to see Mount Fuji.
-  - Egypt to see the Pyramids.
-  - Italy to see the Leaning Tower of Pisa.
+  heartDisease: 0
+  haveCar: 0
+  haveHouse: 0
+  isRichman: 0
+  haveIllness: 0
+  travelPlans: []
   shijian: {fileID: 1736989395}
 --- !u!114 &519420035
 MonoBehaviour:
@@ -2154,7 +2154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0efb08db0af91b443b3cb4fb6405e38c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shifoudianji: 0
+  whetherClick: 0
   text: {fileID: 1736989395}
   content: 
   duration: 2
@@ -2189,6 +2189,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 477586038}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2325,6 +2326,7 @@ RectTransform:
   m_Children:
   - {fileID: 1175749222}
   m_Father: {fileID: 22664288}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2377,7 +2379,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growzhili
+        m_MethodName: intelligenceGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2389,7 +2391,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growxinli
+        m_MethodName: mentalGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2401,7 +2403,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growjiankang
+        m_MethodName: healthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2413,7 +2415,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growcaifu
+        m_MethodName: wealthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2492,6 +2494,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1696001328}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2628,6 +2631,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 477586038}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2762,6 +2766,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1696001328}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2898,6 +2903,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1008501550}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3032,6 +3038,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1912860711}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3168,6 +3175,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1152718007}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3304,6 +3312,7 @@ RectTransform:
   m_Children:
   - {fileID: 1510265833}
   m_Father: {fileID: 22664288}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3356,7 +3365,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growzhili
+        m_MethodName: intelligenceGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3368,7 +3377,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growxinli
+        m_MethodName: mentalGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3380,7 +3389,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growjiankang
+        m_MethodName: healthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3392,7 +3401,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growcaifu
+        m_MethodName: wealthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3471,6 +3480,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1737349212}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3605,6 +3615,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 817235639}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3739,6 +3750,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1401690406}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3875,6 +3887,7 @@ RectTransform:
   m_Children:
   - {fileID: 115529238}
   m_Father: {fileID: 22664288}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3927,7 +3940,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growzhili
+        m_MethodName: intelligenceGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4006,6 +4019,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1696001328}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4144,6 +4158,7 @@ RectTransform:
   m_Children:
   - {fileID: 780735445}
   m_Father: {fileID: 22664288}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4196,7 +4211,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growzhili
+        m_MethodName: intelligenceGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4208,7 +4223,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growxinli
+        m_MethodName: mentalGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4220,7 +4235,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growjiankang
+        m_MethodName: healthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4232,7 +4247,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growcaifu
+        m_MethodName: wealthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4312,6 +4327,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1696001328}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4443,6 +4459,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2044063541}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -4568,7 +4585,7 @@ GameObject:
   m_IsActive: 1
 --- !u!95 &874287732
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4585,8 +4602,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &874287733
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4646,13 +4662,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 874287731}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.71, y: -2.24, z: 0}
   m_LocalScale: {x: 13.896, y: 13.896, z: 13.896}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &912554370
 GameObject:
@@ -4685,6 +4701,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1794078892}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -4821,6 +4838,7 @@ RectTransform:
   m_Children:
   - {fileID: 617662228}
   m_Father: {fileID: 22664288}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4873,7 +4891,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growzhili
+        m_MethodName: intelligenceGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4885,7 +4903,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growxinli
+        m_MethodName: mentalGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4897,7 +4915,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growjiankang
+        m_MethodName: healthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4909,7 +4927,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growcaifu
+        m_MethodName: wealthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4986,6 +5004,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 22664288}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5023,6 +5042,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1805051942}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -5159,6 +5179,7 @@ RectTransform:
   m_Children:
   - {fileID: 1920669045}
   m_Father: {fileID: 22664288}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5211,7 +5232,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growzhili
+        m_MethodName: intelligenceGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5223,7 +5244,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growxinli
+        m_MethodName: mentalGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5235,7 +5256,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growjiankang
+        m_MethodName: healthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5247,7 +5268,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growcaifu
+        m_MethodName: wealthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5326,6 +5347,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1798470548}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -5462,6 +5484,7 @@ RectTransform:
   m_Children:
   - {fileID: 682182808}
   m_Father: {fileID: 22664288}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5514,7 +5537,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growzhili
+        m_MethodName: intelligenceGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5526,7 +5549,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growxinli
+        m_MethodName: mentalGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5538,7 +5561,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growjiankang
+        m_MethodName: healthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5550,7 +5573,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growcaifu
+        m_MethodName: wealthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5631,6 +5654,7 @@ RectTransform:
   m_Children:
   - {fileID: 410817632}
   m_Father: {fileID: 22664288}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5683,7 +5707,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growzhili
+        m_MethodName: intelligenceGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5695,7 +5719,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growxinli
+        m_MethodName: mentalGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5707,7 +5731,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growjiankang
+        m_MethodName: healthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5719,7 +5743,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growcaifu
+        m_MethodName: wealthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5798,6 +5822,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 564996914}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -5930,6 +5955,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 22664288}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5967,6 +5993,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 22664288}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6101,6 +6128,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1960564692}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -6237,6 +6265,7 @@ RectTransform:
   m_Children:
   - {fileID: 790925371}
   m_Father: {fileID: 22664288}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6289,7 +6318,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growzhili
+        m_MethodName: intelligenceGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6301,7 +6330,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growxinli
+        m_MethodName: mentalGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6313,7 +6342,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growjiankang
+        m_MethodName: healthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6325,7 +6354,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growcaifu
+        m_MethodName: wealthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6418,6 +6447,7 @@ RectTransform:
   m_Children:
   - {fileID: 1558795590}
   m_Father: {fileID: 22664288}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6470,7 +6500,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growzhili
+        m_MethodName: intelligenceGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6482,7 +6512,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growxinli
+        m_MethodName: mentalGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6494,7 +6524,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growjiankang
+        m_MethodName: healthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6506,7 +6536,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growcaifu
+        m_MethodName: wealthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6585,6 +6615,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1793173498}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -6717,6 +6748,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 22664288}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6743,7 +6775,7 @@ GameObject:
   m_IsActive: 1
 --- !u!95 &1498823044
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -6760,8 +6792,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &1498823045
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6821,13 +6852,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1498823043}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.09, y: -2.24, z: 0}
   m_LocalScale: {x: 13.896, y: 13.896, z: 13.896}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1510265832
 GameObject:
@@ -6860,6 +6891,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 712556830}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -6994,6 +7026,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1422809718}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -7132,6 +7165,7 @@ RectTransform:
   - {fileID: 802778717}
   - {fileID: 826452905}
   m_Father: {fileID: 22664288}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7207,6 +7241,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 22664288}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7343,6 +7378,7 @@ RectTransform:
   m_Children:
   - {fileID: 749567626}
   m_Father: {fileID: 22664288}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7395,7 +7431,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growzhili
+        m_MethodName: intelligenceGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7407,7 +7443,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growxinli
+        m_MethodName: mentalGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7419,7 +7455,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growjiankang
+        m_MethodName: healthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7431,7 +7467,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growcaifu
+        m_MethodName: wealthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7512,6 +7548,7 @@ RectTransform:
   m_Children:
   - {fileID: 1425834294}
   m_Father: {fileID: 22664288}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7564,7 +7601,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growzhili
+        m_MethodName: intelligenceGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7576,7 +7613,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growxinli
+        m_MethodName: mentalGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7588,7 +7625,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growjiankang
+        m_MethodName: healthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7600,7 +7637,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growcaifu
+        m_MethodName: wealthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7681,6 +7718,7 @@ RectTransform:
   m_Children:
   - {fileID: 912554371}
   m_Father: {fileID: 22664288}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7733,7 +7771,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growzhili
+        m_MethodName: intelligenceGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7745,7 +7783,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growxinli
+        m_MethodName: mentalGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7757,7 +7795,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growjiankang
+        m_MethodName: healthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7769,7 +7807,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growcaifu
+        m_MethodName: wealthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7850,6 +7888,7 @@ RectTransform:
   m_Children:
   - {fileID: 1097633943}
   m_Father: {fileID: 22664288}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7902,7 +7941,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growzhili
+        m_MethodName: intelligenceGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7914,7 +7953,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growxinli
+        m_MethodName: mentalGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7926,7 +7965,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growjiankang
+        m_MethodName: healthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7938,7 +7977,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growcaifu
+        m_MethodName: wealthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8019,6 +8058,7 @@ RectTransform:
   m_Children:
   - {fileID: 1030495476}
   m_Father: {fileID: 22664288}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8071,7 +8111,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growzhili
+        m_MethodName: intelligenceGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8083,7 +8123,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growxinli
+        m_MethodName: mentalGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8095,7 +8135,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growjiankang
+        m_MethodName: healthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8107,7 +8147,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growcaifu
+        m_MethodName: wealthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8188,6 +8228,7 @@ RectTransform:
   m_Children:
   - {fileID: 1880757926}
   m_Father: {fileID: 22664288}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8240,7 +8281,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growzhili
+        m_MethodName: intelligenceGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8252,7 +8293,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growxinli
+        m_MethodName: mentalGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8264,7 +8305,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growjiankang
+        m_MethodName: healthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8276,7 +8317,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growcaifu
+        m_MethodName: wealthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8355,6 +8396,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1880698279}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -8491,6 +8533,7 @@ RectTransform:
   m_Children:
   - {fileID: 681344190}
   m_Father: {fileID: 22664288}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8543,7 +8586,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growzhili
+        m_MethodName: intelligenceGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8555,7 +8598,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growxinli
+        m_MethodName: mentalGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8567,7 +8610,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growjiankang
+        m_MethodName: healthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8579,7 +8622,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growcaifu
+        m_MethodName: wealthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8658,6 +8701,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1091403568}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -8794,6 +8838,7 @@ RectTransform:
   m_Children:
   - {fileID: 1382031897}
   m_Father: {fileID: 22664288}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8846,7 +8891,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growzhili
+        m_MethodName: intelligenceGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8858,7 +8903,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growxinli
+        m_MethodName: mentalGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8870,7 +8915,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growjiankang
+        m_MethodName: healthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8882,7 +8927,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growcaifu
+        m_MethodName: wealthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8960,7 +9005,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -8990,13 +9034,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1971738179}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1993425059
 GameObject:
@@ -9031,6 +9075,7 @@ RectTransform:
   m_Children:
   - {fileID: 381884567}
   m_Father: {fileID: 22664288}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9083,7 +9128,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growzhili
+        m_MethodName: intelligenceGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9095,7 +9140,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growxinli
+        m_MethodName: mentalGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9107,7 +9152,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growjiankang
+        m_MethodName: healthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9119,7 +9164,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growcaifu
+        m_MethodName: wealthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9196,6 +9241,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 22664288}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9233,6 +9279,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2032811699}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -9262,7 +9309,7 @@ MonoBehaviour:
   m_text: play
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6c314887469de1043932b1a8cc394e7f, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 5382133528713325487, guid: 6c314887469de1043932b1a8cc394e7f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9325,7 +9372,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &2007216744
@@ -9369,6 +9416,7 @@ RectTransform:
   m_Children:
   - {fileID: 2007216742}
   m_Father: {fileID: 22664288}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9421,7 +9469,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growxinli
+        m_MethodName: mentalGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9433,7 +9481,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growjiankang
+        m_MethodName: healthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9514,6 +9562,7 @@ RectTransform:
   m_Children:
   - {fileID: 837402268}
   m_Father: {fileID: 22664288}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9566,7 +9615,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growzhili
+        m_MethodName: intelligenceGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9578,7 +9627,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growxinli
+        m_MethodName: mentalGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9590,7 +9639,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growjiankang
+        m_MethodName: healthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9602,7 +9651,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growcaifu
+        m_MethodName: wealthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9683,6 +9732,7 @@ RectTransform:
   m_Children:
   - {fileID: 374654000}
   m_Father: {fileID: 22664288}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9735,7 +9785,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growzhili
+        m_MethodName: intelligenceGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9747,7 +9797,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growxinli
+        m_MethodName: mentalGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9759,7 +9809,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growjiankang
+        m_MethodName: healthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9771,7 +9821,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 22664293}
         m_TargetAssemblyTypeName: shuxingkongzhi, Assembly-CSharp
-        m_MethodName: growcaifu
+        m_MethodName: wealthGrowth
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9850,6 +9900,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 477586038}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9984,6 +10035,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 384540704}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -10107,7 +10159,7 @@ GameObject:
   m_IsActive: 0
 --- !u!95 &2084230099
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -10124,8 +10176,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &2084230100
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10185,13 +10236,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2084230098}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.18, y: -2.24, z: 0}
   m_LocalScale: {x: 13.896, y: 13.896, z: 13.896}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2110112073
 GameObject:
@@ -10224,6 +10275,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 50435877}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -10327,15 +10379,3 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2110112073}
   m_CullTransparentMesh: 1
---- !u!1660057539 &9223372036854775807
-SceneRoots:
-  m_ObjectHideFlags: 0
-  m_Roots:
-  - {fileID: 519420032}
-  - {fileID: 145672038}
-  - {fileID: 293458412}
-  - {fileID: 1498823046}
-  - {fileID: 2084230101}
-  - {fileID: 874287734}
-  - {fileID: 1971738182}
-  - {fileID: 22664288}
