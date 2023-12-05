@@ -327,8 +327,10 @@ public class yiwaishijian : MonoBehaviour
 
     public void workPromotion()
     {
+        //先决条件随机
+        float tmp = Random.Range(0, 10);
         //年龄及智力判断
-        if (man.tha.year >= 25 && man.tha.year <= 50 && shuxingkongzhi.tha.intelligence > 40)
+        if (man.tha.year >= 25 && man.tha.year <= 50 && shuxingkongzhi.tha.intelligence > 40 && tmp >= 5)
         {
             TypewriterEffect.tha.content = "he got a work promotion";
             TypewriterEffect.tha.typeWords();
@@ -342,8 +344,10 @@ public class yiwaishijian : MonoBehaviour
 
     public void workDemotion()
     {
+        //先决条件随机
+        float tmp = Random.Range(0, 10);
         //年龄及智力判断
-        if (man.tha.year >= 25 && man.tha.year <= 50 && shuxingkongzhi.tha.intelligence < 20)
+        if (man.tha.year >= 25 && man.tha.year <= 50 && shuxingkongzhi.tha.intelligence < 20 && tmp >= 5)
         {
             TypewriterEffect.tha.content = "he got a work demotion";
             TypewriterEffect.tha.typeWords();
